@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Service de location de numéros virtuels">
+
+  <title>Virtual Number</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">📱</span>
+      <span>Virtual<span>Number</span></span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+      <a href="#accueil">Accueil</a>
+      <a href="#pays">Numéros</a>
+      <a href="#fonctionnement">Comment ça marche</a>
+      <a href="#connexion">Connexion</a>
+    </nav>
+  </header>
+
+
+  <!-- ================= ACCUEIL ================= -->
+  <main>
+
+    <section id="accueil" class="hero">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          ⚡ Numéros virtuels disponibles
+        </div>
+
+        <h1>
+          Votre numéro virtuel,
+          <span>simplement.</span>
+        </h1>
+
+        <p>
+          Louez un numéro virtuel et gérez vos commandes
+          directement depuis votre espace personnel.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pays" class="btn primary">
+            Choisir un numéro
+          </a>
+
+          <a href="#fonctionnement" class="btn secondary">
+            Comment ça marche ?
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PAYS ================= -->
+    <section id="pays" class="section">
+
+      <div class="section-title">
+        <span>🌍</span>
+        <h2>Choisissez votre pays</h2>
+        <p>
+          Sélectionnez le pays du numéro que vous souhaitez louer.
+        </p>
+      </div>
+
+
+      <div class="countries">
+
+        <!-- MAROC -->
+        <article class="country-card">
+
+          <div class="country-flag">🇲🇦</div>
+
+          <h3>Maroc</h3>
+
+          <p class="country-code">+212</p>
+
+          <div class="availability">
+            <span class="dot"></span>
+            Disponibilité à vérifier
+          </div>
+
+          <button
+            class="country-btn"
+            onclick="selectCountry('Maroc', '+212')">
+            Voir les offres
+          </button>
+
+        </article>
+
+
+        <!-- TURQUIE -->
+        <article class="country-card">
+
+          <div class="country-flag">🇹🇷</div>
+
+          <h3>Turquie</h3>
+
+          <p class="country-code">+90</p>
+
+          <div class="availability">
+            <span class="dot"></span>
+            Disponibilité à vérifier
+          </div>
+
+          <button
+            class="country-btn"
+            onclick="selectCountry('Turquie', '+90')">
+            Voir les offres
+          </button>
+
+        </article>
+
+
+        <!-- SENEGAL -->
+        <article class="country-card">
+
+          <div class="country-flag">🇸🇳</div>
+
+          <h3>Sénégal</h3>
+
+          <p class="country-code">+221</p>
+
+          <div class="availability">
+            <span class="dot"></span>
+            Disponibilité à vérifier
+          </div>
+
+          <button
+            class="country-btn"
+            onclick="selectCountry('Sénégal', '+221')">
+            Voir les offres
+          </button>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= OFFRES ================= -->
+    <section id="offres" class="section offers-section">
+
+      <div class="section-title">
+        <span>📞</span>
+
+        <h2 id="selectedCountryTitle">
+          Choisissez un pays
+        </h2>
+
+        <p>
+          Sélectionnez une durée de location.
+        </p>
+      </div>
+
+
+      <div id="offersContainer" class="offers">
+
+        <div class="empty-offers">
+          <div>🌍</div>
+
+          <h3>Aucun pays sélectionné</h3>
+
+          <p>
+            Choisissez un pays ci-dessus pour voir les offres.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FONCTIONNEMENT ================= -->
+    <section id="fonctionnement" class="section how-section">
+
+      <div class="section-title">
+
+        <span>🚀</span>
+
+        <h2>Comment ça marche ?</h2>
+
+        <p>
+          Obtenir votre numéro se fera en quelques étapes.
+        </p>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">1</div>
+
+          <h3>Choisissez un pays</h3>
+
+          <p>
+            Sélectionnez Maroc, Turquie ou Sénégal.
+          </p>
+        </div>
+
+
+        <div class="step">
+          <div class="step-number">2</div>
+
+          <h3>Choisissez une durée</h3>
+
+          <p>
+            Sélectionnez l'offre qui vous convient.
+          </p>
+        </div>
+
+
+        <div class="step">
+          <div class="step-number">3</div>
+
+          <h3>Payez votre commande</h3>
+
+          <p>
+            Effectuez le paiement avec le moyen disponible.
+          </p>
+        </div>
+
+
+        <div class="step">
+          <div class="step-number">4</div>
+
+          <h3>Gérez votre numéro</h3>
+
+          <p>
+            Retrouvez votre numéro dans votre espace client.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONNEXION ================= -->
+    <section id="connexion" class="section login-section">
+
+      <div class="login-card">
+
+        <div class="login-icon">
+          👤
+        </div>
+
+        <h2>Votre espace client</h2>
+
+        <p>
+          Connectez-vous pour consulter vos numéros
+          et vos commandes.
+        </p>
+
+        <form onsubmit="login(event)">
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Adresse e-mail"
+            required
+          >
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Mot de passe"
+            required
+          >
+
+          <button type="submit" class="btn primary full">
+            Se connecter
+          </button>
+
+        </form>
+
+        <p class="login-note">
+          Nouveau client ?
+          <button onclick="showRegister()">
+            Créer un compte
+          </button>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+
+    <div class="footer-logo">
+      📱 VirtualNumber
+    </div>
+
+    <p>
+      Service de numéros virtuels.
+    </p>
+
+    <div class="footer-links">
+      <a href="#">Conditions</a>
+      <a href="#">Confidentialité</a>
+      <a href="#">Support</a>
+    </div>
+
+    <p class="copyright">
+      © 2026 VirtualNumber — Tous droits réservés.
+    </p>
+
+  </footer>
+
+
+  <!-- ================= NOTIFICATION ================= -->
+  <div id="notification" class="notification">
+    <span id="notificationText"></span>
+  </div>
+
+
+  <!-- ================= SCRIPT ================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
